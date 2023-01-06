@@ -13,11 +13,11 @@ public class Linkedlist {
 		head=node;
 	}
 		else {
-			Node n=head;
-		while(n.next != null) {
-			n=n.next;
+			Node position=head;
+		while(position.next != null) {
+			position=position.next;
 		}
-		n.next=node;
+		position.next=node;
 		}
 	    }
 	public void addFirst(int data) {
@@ -27,6 +27,27 @@ public class Linkedlist {
 	node.next=head;
 	head=node;
 	}
+	///inserting value 
+	public void Insert(int indice,int data) {
+		Node node=new Node();
+		node.data=data;
+		node.next=null;
+		if(indice==0) {
+			addFirst(data);
+		}
+		else {
+			Node positionN=head;
+			for(int i=0;i<indice-1;i++) {
+				positionN=positionN.next;
+			}
+			node.next=positionN.next;
+		
+		node.next=positionN.next;
+		positionN.next=node;
+		}
+	   }
+		
+	
 	public void print() {
 		Node node=head;
 		while(node.next != null) {

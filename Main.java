@@ -10,7 +10,7 @@ public class Main {
 	ll.add(70);
 	ll.print();
 	//ll.addFirst(70);
-	//ll.addFirst(30);
-	//ll.addFirst(56);
+	///ll.addFirst(30);
+	////ll.addFirst(56);
 	//ll.print();
 	}}
