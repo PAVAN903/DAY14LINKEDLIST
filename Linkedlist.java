@@ -40,12 +40,18 @@ public class Linkedlist {
 			for(int i=0;i<indice-1;i++) {
 				positionN=positionN.next;
 			}
-			node.next=positionN.next;
-		
 		node.next=positionN.next;
 		positionN.next=node;
 		}
 	   }
+	public void delete() {
+		if(head==null) {
+			return;
+		}
+		head=head.next;
+		
+		}
+	
 		
 	
 	public void print() {
