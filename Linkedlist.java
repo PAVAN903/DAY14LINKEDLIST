@@ -51,6 +51,24 @@ public class Linkedlist {
 		head=head.next;
 		
 		}
+	void deletelast(){
+		if(head==null) {
+			return;
+		}
+		if(head.next==null) {
+			head=null;
+			return;
+		}
+		Node Last=head;
+		Node LastNode=head.next;
+		while(LastNode.next!=null) {
+			LastNode=head.next;
+			Last=Last.next;
+		}
+		Last.next=null;
+		}
+		
+	
 	
 		
 	

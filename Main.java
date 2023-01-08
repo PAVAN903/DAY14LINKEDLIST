@@ -13,6 +13,7 @@ public class Main {
 	///ll.addFirst(30);
 	////ll.addFirst(56);
 	//ll.print();
-	ll.delete();
+	//ll.delete();
+	ll.deletelast();
 	ll.print();
 	}}
