@@ -4,27 +4,40 @@ package com.linkedlist;
 
 public class Linkedlist {
 	Node head;
+	
+	 private int size;
+	public Linkedlist() {
+		this.size=0;
+	}
+	//adding data 
 	public void add(int data) {
 	Node node=new Node();
 	node.data=data;
 	node.next=null;
 	
 	if(head==null) {
+		size++;
+		if(head==null)
+		{
 		head=node;
 	}
 		else {
+			
 			Node position=head;
 		while(position.next != null) {
+	    while(position.next!=null)
 			position=position.next;
 		}
 		position.next=node;
 		}
-	    }
+	    
+	}}
 	public void addFirst(int data) {
 	Node node=new Node();
 	node.data=data; 
 	node.next=null;
 	node.next=head;
+	size++;
 	head=node;
 	}
 	///inserting value 
@@ -32,6 +45,7 @@ public class Linkedlist {
 		Node node=new Node();
 		node.data=data;
 		node.next=null;
+		size++;
 		if(indice==0) {
 			addFirst(data);
 		}
@@ -49,6 +63,7 @@ public class Linkedlist {
 			return;
 		}
 		head=head.next;
+		size--;
 		
 		}
 	void deletelast(){
@@ -61,12 +76,16 @@ public class Linkedlist {
 		}
 		Node Last=head;
 		Node LastNode=head.next;
+		size--;
 		while(LastNode.next!=null) {
 			LastNode=head.next;
 			Last=Last.next;
 		}
 		Last.next=null;
 		}
+	public int getsize() {
+		return size;
+	}
 		
 	
 	
@@ -79,6 +98,7 @@ public class Linkedlist {
 			node=node.next;
 		}
 		System.out.println(node.data);
+		
 		
 		}
 	}
