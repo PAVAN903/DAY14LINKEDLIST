@@ -17,7 +17,13 @@ public class Main {
 	Scanner sc=new Scanner(System.in);
 	System.out.printf("Add at positon: %d "+"Value: %d",position=sc.nextInt(),value=sc.nextInt());
 	System.out.println();
-	//ll.Insert(position, value);
+	System.out.println();
+	
+	ll.Insert(position, value);
+	int delete;
+	System.out.println("enter delete value:: ");
+	delete=sc.nextInt();
+	ll.deleteSearch(delete);
 	//ll.addFirst(70);
 	///ll.addFirst(30);
 	////ll.addFirst(56);
@@ -26,4 +32,5 @@ public class Main {
 	//ll.deletelast();
 	ll.print();
 	System.out.println(ll.getsize());
+	System.out.println("size of list is "+ ll.getsize());
 	}}

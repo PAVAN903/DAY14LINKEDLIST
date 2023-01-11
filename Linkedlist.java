@@ -86,6 +86,22 @@ public class Linkedlist {
 	public int getsize() {
 		return size;
 	}
+	//searchdeletion of list
+	public void deleteSearch(int data) {
+		Node current=head,previous=null;
+		if(current!=null && current.data==data) {
+			head=current.next;
+			return;
+		}
+		while(current!=null && current.data!=data) {
+			previous=current;
+			current=current.next;
+		}
+		if(current==null) {
+			return;
+		}
+		previous.next=current.next;
+	}
 		
 	
 	
@@ -98,10 +114,9 @@ public class Linkedlist {
 			node=node.next;
 		}
 		System.out.println(node.data);
-		
-		
 		}
-	}
+	    }
+
 
 	
 
